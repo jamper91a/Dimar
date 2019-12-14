@@ -1,0 +1,3 @@
+include ':app', ':base', ':instantapp', ':things', ':slideDateTimePickerSample', ':slideDateTimePicker'
+project(':slideDateTimePickerSample').projectDir = new File('app/libs/SlideDateTimePicker/slideDateTimePickerSample')
+project(':slideDateTimePicker').projectDir = new File('app/libs/SlideDateTimePicker/slideDateTimePicker')

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ls="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".fragments.cabotage.ArriboOperativoCabotajeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/textLabelThird"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/movimiento_operativo" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/rectangle_background"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+
+                            <LinearLayout
+                                android:id="@+id/sectionArribo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorAccent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtLblSectArribo"
+                                    style="@style/textLabelPrimary"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:text="@string/arribo" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/contentArribo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:theme="@style/textLabel">
+
+                                    <android.support.design.widget.TextInputEditText
+                                        android:id="@+id/txtFechaHoraAreaControl"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:focusable="false"
+                                        android:hint="@string/fecha_hora_area_control"
+                                        android:inputType="date"
+                                        android:textColor="@color/colorPrimaryDark" />
+                                </android.support.design.widget.TextInputLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <android.support.design.widget.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:theme="@style/textLabel">
+
+                                        <android.support.design.widget.TextInputEditText
+                                            android:id="@+id/txtFechaHoraAtraque"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:focusable="false"
+                                            android:hint="@string/fecha_hora_atraque"
+                                            android:inputType="date"
+                                            android:textColor="@color/colorPrimaryDark" />
+                                    </android.support.design.widget.TextInputLayout>
+
+                                    <android.support.design.widget.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:theme="@style/textLabel">
+
+                                        <android.support.design.widget.TextInputEditText
+                                            android:id="@+id/txtCaladoMaximo"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="@string/calado_maximo"
+                                            android:inputType="numberDecimal"
+                                            android:textColor="@color/colorPrimaryDark" />
+                                    </android.support.design.widget.TextInputLayout>
+
+                                </LinearLayout>
+
+                                <com.satsuware.usefulviews.LabelledSpinner
+                                    android:id="@+id/spnInstalacionPortuaria"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:spinnerMode="dialog"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:theme="@style/textLabel"
+                                    ls:labelText="@string/muelle"
+                                    ls:widgetColor="@color/colorAccent" />
+
+                                <com.satsuware.usefulviews.LabelledSpinner
+                                    android:id="@+id/spnRazonArribo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:spinnerMode="dialog"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:theme="@style/textLabel"
+                                    ls:labelText="@string/razon_arribo"
+                                    ls:widgetColor="@color/colorAccent" />
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:theme="@style/textLabel">
+
+                                    <android.support.design.widget.TextInputEditText
+                                        android:id="@+id/txtObservaciones"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/observaciones"
+                                        android:inputType="textLongMessage"
+                                        android:textColor="@color/colorPrimaryDark" />
+                                </android.support.design.widget.TextInputLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

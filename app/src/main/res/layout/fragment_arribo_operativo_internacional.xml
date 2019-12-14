@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ls="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    tools:context=".fragments.internacional.ArriboOperativoInternacionalFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/textLabelThird"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/movimiento_operativo" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false">
+
+            <LinearLayout
+                android:paddingBottom="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/rectangle_background"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+
+                            <LinearLayout
+                                android:id="@+id/sectionArribo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorAccent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtLblSectArribo"
+                                    style="@style/textLabelPrimary"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:text="@string/arribo" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/contentArribo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:baselineAligned="false"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <android.support.design.widget.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:theme="@style/textLabel">
+
+                                        <android.support.design.widget.TextInputEditText
+                                            android:id="@+id/txtFechaHoraAreaControl"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:focusable="false"
+                                            android:hint="@string/fecha_hora_area_control"
+                                            android:inputType="date"
+                                            android:textColor="@color/colorPrimaryDark" />
+                                    </android.support.design.widget.TextInputLayout>
+
+                                    <android.support.design.widget.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:theme="@style/textLabel">
+
+                                        <android.support.design.widget.TextInputEditText
+                                            android:id="@+id/txtFechaHoraArribo"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:focusable="false"
+                                            android:hint="@string/fecha_hora_arribo"
+                                            android:inputType="date"
+                                            android:textColor="@color/colorPrimaryDark" />
+                                    </android.support.design.widget.TextInputLayout>
+
+                                </LinearLayout>
+
+                                <com.satsuware.usefulviews.LabelledSpinner
+                                    android:id="@+id/spnPilotoPractico"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:spinnerMode="dialog"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:theme="@style/textLabel"
+                                    android:visibility="gone"
+                                    ls:labelText="@string/piloto_practico"
+                                    ls:widgetColor="@color/colorAccent">
+
+                                </com.satsuware.usefulviews.LabelledSpinner>
+
+                                <com.satsuware.usefulviews.LabelledSpinner
+                                    android:id="@+id/spnPilotoEntrenamiento"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:spinnerMode="dialog"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:theme="@style/textLabel"
+                                    android:visibility="gone"
+                                    ls:labelText="@string/piloto_entrenamiento"
+                                    ls:widgetColor="@color/colorAccent"
+                                    tools:visibility="gone" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:baselineAligned="false"
+                                    android:orientation="horizontal">
+
+                                    <android.support.design.widget.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.2"
+                                        android:theme="@style/textLabel">
+
+                                        <android.support.design.widget.TextInputEditText
+                                            android:id="@+id/txtFechaHoraPilotoAbordoReporte"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:focusable="false"
+                                            android:hint="@string/fecha_hora_piloto_abordo_reporte"
+                                            android:inputType="date"
+                                            android:textColor="@color/colorPrimaryDark" />
+                                    </android.support.design.widget.TextInputLayout>
+
+                                    <android.support.design.widget.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.3"
+                                        android:theme="@style/textLabel">
+
+                                        <android.support.design.widget.TextInputEditText
+                                            android:id="@+id/txtIntCaladoProa"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="@string/calado_proa"
+                                            android:inputType="numberDecimal"
+                                            android:textColor="@color/colorPrimaryDark" />
+                                    </android.support.design.widget.TextInputLayout>
+
+                                    <android.support.design.widget.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.3"
+                                        android:theme="@style/textLabel">
+
+                                        <android.support.design.widget.TextInputEditText
+                                            android:id="@+id/txtIntCaladoPopa"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="@string/calado_popa"
+                                            android:inputType="numberDecimal"
+                                            android:textColor="@color/colorPrimaryDark" />
+
+                                    </android.support.design.widget.TextInputLayout>
+                                </LinearLayout>
+
+                                <com.satsuware.usefulviews.LabelledSpinner
+                                    android:id="@+id/spnLanchaTransportePiloto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:spinnerMode="dialog"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:theme="@style/textLabel"
+                                    ls:labelText="@string/lancha_transporte_piloto"
+                                    ls:widgetColor="@color/colorAccent" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/rectangle_background"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+
+                            <LinearLayout
+                                android:id="@+id/sectionAtraqueFondeo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorAccent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtLblSectAtraqueFondeo"
+                                    style="@style/textLabelPrimary"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:text="@string/atraque_fondeo" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/contentAtraqueFondeo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:baselineAligned="false"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <android.support.design.widget.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:theme="@style/textLabel">
+
+                                        <android.support.design.widget.TextInputEditText
+                                            android:id="@+id/txtFechaHoraInicioManiobraAtraque"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:focusable="false"
+                                            android:hint="@string/fecha_hora_inicio_maniobra_atraque"
+                                            android:inputType="date"
+                                            android:textColor="@color/colorPrimaryDark" />
+                                    </android.support.design.widget.TextInputLayout>
+
+                                    <android.support.design.widget.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:theme="@style/textLabel">
+
+                                        <android.support.design.widget.TextInputEditText
+                                            android:id="@+id/txtFechaHoraFinManiobraAtraque"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:focusable="false"
+                                            android:hint="@string/fecha_hora_fin_maniobra_atraque"
+                                            android:inputType="date"
+                                            android:textColor="@color/colorPrimaryDark" />
+                                    </android.support.design.widget.TextInputLayout>
+                                </LinearLayout>
+
+                                <com.satsuware.usefulviews.LabelledSpinner
+                                    android:id="@+id/spnPilotoAtraque"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:spinnerMode="dialog"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:theme="@style/textLabel"
+                                    ls:labelText="@string/piloto_atraque"
+                                    ls:widgetColor="@color/colorAccent" >
+
+                                </com.satsuware.usefulviews.LabelledSpinner>
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:theme="@style/textLabel">
+
+                                    <android.support.design.widget.TextInputEditText
+                                        android:id="@+id/titlePilotosAsistentes"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:focusable="false"
+                                        android:hint="@string/piloto_asistente"
+                                        android:inputType="date"
+                                        android:textColor="@color/colorPrimaryDark" />
+                                </android.support.design.widget.TextInputLayout>
+
+
+                                <com.sbi.dimar.visitaoficialarribooffline.app.utilities.MultiSelectionSpinnerPilotosAsistentes
+                                    android:id="@+id/spnPilotosAsistentes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="30dp"
+                                    android:spinnerMode="dialog"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:theme="@style/textLabel"
+                                    ls:labelText="@string/piloto_asistente"
+                                    ls:widgetColor="@color/colorAccent">
+
+                                </com.sbi.dimar.visitaoficialarribooffline.app.utilities.MultiSelectionSpinnerPilotosAsistentes>
+
+                                <TextView
+                                    android:id="@+id/txtPilotosAsistentesSeleccionados"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <com.satsuware.usefulviews.LabelledSpinner
+                                    android:id="@+id/spnPilotoEntrenamientoAtraque"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:spinnerMode="dialog"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:theme="@style/textLabel"
+                                    android:visibility="visible"
+                                    ls:labelText="@string/piloto_entrenamiento_atraque"
+                                    ls:widgetColor="@color/colorAccent" />
+
+                                <com.satsuware.usefulviews.LabelledSpinner
+                                    android:id="@+id/spnInstalacionPortuaria"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:spinnerMode="dialog"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:theme="@style/textLabel"
+                                    ls:labelText="@string/instalacion_portuaria"
+                                    ls:widgetColor="@color/colorAccent" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/rectangle_background"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+                            <LinearLayout
+                                android:id="@+id/sectionRemolcador"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorAccent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtLblSectRemolcador"
+                                    style="@style/textLabelPrimary"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:text="@string/remolcador" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/conentRemolcador"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="50dp"
+                                android:orientation="vertical">
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:theme="@style/textLabel">
+
+                                    <android.support.design.widget.TextInputEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:focusable="false"
+                                        android:hint="@string/remolcadores"
+                                        android:inputType="date"
+                                        android:textColor="@color/colorPrimaryDark" />
+                                </android.support.design.widget.TextInputLayout>
+
+                                <com.sbi.dimar.visitaoficialarribooffline.app.utilities.MultiSelectionSpinnerRemolcadores
+                                    android:id="@+id/spnRemolcador"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:spinnerMode="dialog"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:theme="@style/textLabel"
+                                    ls:labelText="@string/remolcador"
+                                    ls:widgetColor="@color/colorAccent">
+
+                                </com.sbi.dimar.visitaoficialarribooffline.app.utilities.MultiSelectionSpinnerRemolcadores>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

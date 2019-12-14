@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ls="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".fragments.cabotage.ArriboAdministrativoCabotajeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/textLabelThird"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/movimiento_administrativo" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/rectangle_background"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/sectionLibrePlatica"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorAccent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtLblSectLibrePlatica"
+                            style="@style/textLabelPrimary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:text="@string/libre_platica" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/contentLibrePlatica"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:theme="@style/textLabel">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/txtFechaHoraLibrePlatica"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusable="false"
+                                    android:hint="@string/fecha_hora_libre_platica"
+                                    android:inputType="date"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:theme="@style/textLabel">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/txtFechaHoraVisita"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusable="false"
+                                    android:hint="@string/fecha_hora_visita"
+                                    android:inputType="date"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </android.support.design.widget.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                        <RadioButton
+                            android:id="@+id/radBtnVisitada"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/visitada"
+                            android:textColor="@color/colorAccent"
+                            android:theme="@style/textLabel" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/textLabel">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/txtObservaciones"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/observaciones"
+                                android:inputType="textLongMessage"
+                                android:textColor="@color/colorPrimaryDark" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/rectangle_background"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/sectionFirmas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorAccent"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/txtLblFirmas"
+                            style="@style/textLabelPrimary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:text="@string/firmas" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/contentFirmas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <com.satsuware.usefulviews.LabelledSpinner
+                                android:id="@+id/spnRepresentante"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.8"
+                                android:spinnerMode="dialog"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:theme="@style/textLabel"
+                                ls:labelText="@string/representante"
+                                ls:widgetColor="@color/colorAccent" />
+
+                            <ImageButton
+                                android:id="@+id/btnAddSignature"
+                                style="@style/buttonPrimary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@color/colorPrimary"
+                                android:enabled="false"
+                                android:src="@android:drawable/ic_menu_add"
+                                android:tint="@color/colorAccent" />
+
+
+                        </LinearLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_view_signs"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:layout_weight="0.2"
+                            android:background="@drawable/rectangle_background"
+                            android:clickable="false"
+                            android:clipToPadding="false"
+                            android:padding="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>
